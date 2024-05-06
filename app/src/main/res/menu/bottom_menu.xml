@@ -4,21 +4,17 @@
     <item
         android:id="@+id/bottom_home"
         android:title="Home"
-        android:icon="@color/cardview_shadow_end_color"/>
+        android:icon="@drawable/ic_main_menu"/>
 
     <item
         android:id="@+id/bottom_favorites"
         android:title="Favorites"
-        android:icon="@color/cardview_shadow_end_color"/>
+        android:icon="@drawable/ic_favorites"/>
 
     <item
         android:id="@+id/bottom_about_me"
         android:title="About me"
-        android:icon="@color/cardview_shadow_end_color"/>
-
-    <item
-        android:id="@+id/bottom_search"
-        android:title="Search"
-        android:icon="@color/cardview_shadow_end_color"/>
+        android:src="@drawable/ic_about_me"
+        android:icon="@drawable/ic_about_me"/>
 
 </menu>

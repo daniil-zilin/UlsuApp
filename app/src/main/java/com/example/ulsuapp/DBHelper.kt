@@ -13,6 +13,10 @@ class DBHelper(context: Context) : SQLiteOpenHelper(
             const val DATABASE_NAME = "pet_shop"
             const val DATABASE_VERSION = 1
             const val TABLE_NAME = "pets"
+            const val FAVORITES = "favorites"
+            const val TABLE_NAME_FIRST = "pet_name"
+            const val TABLE_PET_SEX = "sex"
+            const val TABLE_PET_BREED = "breed"
         }
 
     override fun onCreate(db: SQLiteDatabase?) {
@@ -35,6 +39,11 @@ class DBHelper(context: Context) : SQLiteOpenHelper(
             "address VARCHAR(255)," +
             "email VARCHAR(100)" +
             ")"
+        )
+
+        db?.execSQL("CREATE TABLE favorites (" +
+            "${BaseColumns._ID} INTEGER PRIMARY KEY, " +
+            "pet_name VARCHAR(20))"
         )
     }
 

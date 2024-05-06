@@ -3,13 +3,34 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/design_default_color_primary_dark"
+    android:background="#4453E7"
     tools:context=".ItemActivityFragment">
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text=""
-        android:gravity="center" />
+        android:layout_height="64dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="0dp"
+        android:background="#D9D9D9"
+        android:textSize="26dp"
+        android:gravity="center"
+        android:text="Список избранного">
+
+    </TextView>
+
+
+    <ListView
+        android:id="@+id/list_view_2"
+        android:layout_width="380dp"
+        android:layout_height="550dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="83dp"
+        android:layout_marginEnd="45dp"
+        android:background="#D9D9D9"
+        android:gravity="center"
+        android:text="" />
 
 </FrameLayout>

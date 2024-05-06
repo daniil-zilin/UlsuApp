@@ -25,7 +25,7 @@ class MainActivity : AppCompatActivity() {
                     replaceFragment(AboutMeFragment())
                     true
                 }
-                R.id.bottom_search -> {
+                R.id.bottom_favorites-> {
                     replaceFragment(ItemActivityFragment())
                     true
                 }

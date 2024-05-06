@@ -1,14 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#4453E7"
     tools:context=".AboutMeFragment">
+
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Даниил Силин"
-        android:gravity="center" />
+        android:layout_height="64dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="0dp"
+        android:background="#D9D9D9"
+        android:textSize="26dp"
+        android:gravity="center"
+        android:text="Информация о себе">
 
-</FrameLayout>
+    </TextView>
+
+    <TextView
+        android:layout_width="380dp"
+        android:layout_height="550dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="-1dp"
+        android:layout_marginBottom="83dp"
+        android:background="#D9D9D9"
+        android:gravity="center"
+        android:textSize="26dp">
+
+    </TextView>
+
+    <TextView
+        android:layout_width="333dp"
+        android:layout_height="176dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="352dp"
+        android:layout_marginEnd="64dp"
+        android:text="Имя: Даниил \nФамилия: Силин \n \nМестоположение: Российская Федерация, Самарская область, г. Сызрань \n
+\nКонтакты для связи: \nТелефон: +7(927)0289139 \nE-mail: elico161001@gmail.com" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="264dp"
+        android:layout_height="214dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="-2dp"
+        android:layout_marginBottom="392dp"
+        android:src="@drawable/_9bi7nm_mqs" />
+
+    <!--    <TextView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:gravity="center"-->
+<!--        android:text="Имя пользоателя: Z1mple" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/last_name"-->
+<!--        android:layout_width="345dp"-->
+<!--        android:layout_height="257dp"-->
+<!--        android:gravity="center"-->
+<!--        android:text="Фамилия: Силин" />-->
+
+    <!--    <ImageView-->
+<!--        android:layout_width=""-->
+<!--        android:layout_height=""-->
+<!--        />-->
+
+</RelativeLayout>
+
