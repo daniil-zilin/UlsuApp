@@ -40,7 +40,7 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_marginStart="14dp"
-        android:layout_marginTop="352dp"
+        android:layout_marginTop="370dp"
         android:layout_marginEnd="64dp"
         android:text="Имя: Даниил \nФамилия: Силин \n \nМестоположение: Российская Федерация, Самарская область, г. Сызрань \n
 \nКонтакты для связи: \nТелефон: +7(927)0289139 \nE-mail: elico161001@gmail.com" />

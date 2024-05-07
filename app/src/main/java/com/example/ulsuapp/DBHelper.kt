@@ -17,6 +17,7 @@ class DBHelper(context: Context) : SQLiteOpenHelper(
             const val TABLE_NAME_FIRST = "pet_name"
             const val TABLE_PET_SEX = "sex"
             const val TABLE_PET_BREED = "breed"
+            const val INFORMATION = "information"
         }
 
     override fun onCreate(db: SQLiteDatabase?) {
@@ -27,6 +28,8 @@ class DBHelper(context: Context) : SQLiteOpenHelper(
             "breed VARCHAR(50), " +
             "sex VARCHAR(20), " +
             "information VARCHAR(255))"
+//            "address VARCHAR(255)," +
+//            "email VARCHAR(100))"
         )
 
         db?.execSQL("INSERT INTO pets (pet_name, age, breed, sex, information) VALUES " +
@@ -34,16 +37,9 @@ class DBHelper(context: Context) : SQLiteOpenHelper(
             " ('Масяня', 0.5, 'Домашняя', 'Девочка', 'Отдам в хорошие руки, любит беситься')"
         )
 
-        db?.execSQL("CREATE TABLE owners (" +
-            "${BaseColumns._ID} INTEGER PRIMARY KEY, " +
-            "address VARCHAR(255)," +
-            "email VARCHAR(100)" +
-            ")"
-        )
-
         db?.execSQL("CREATE TABLE favorites (" +
             "${BaseColumns._ID} INTEGER PRIMARY KEY, " +
-            "pet_name VARCHAR(20))"
+            "pet_name VARCHAR(255))"
         )
     }
 

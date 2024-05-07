@@ -21,7 +21,6 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         dbHelper = DBHelper(requireContext())
-//        val database = dbHelper!!.writableDatabase
         val database = dbHelper!!.readableDatabase
         val cursor = database.query(DBHelper.TABLE_NAME, null, null, null, null, null, null)
 
@@ -30,22 +29,21 @@ class HomeFragment : Fragment() {
             val item_id: Int = cursor.getInt(cursor.getColumnIndex(BaseColumns._ID))
             val item_content: String = cursor.getString(cursor.getColumnIndex(DBHelper.TABLE_NAME_FIRST))
             val pet_sex: String = cursor.getString(cursor.getColumnIndex(DBHelper.TABLE_PET_SEX))
-//          Log.d("Log", pet_name.toString())
-            list.add(item_id.toString() + "\n" + item_content.toString() + "\n" + pet_sex.toString())
+            val breed: String = cursor.getString(cursor.getColumnIndex(DBHelper.TABLE_PET_BREED))
+            val information: String = cursor.getString(cursor.getColumnIndex(DBHelper.INFORMATION))
+            list.add("ID объявления: " + item_id.toString() + "\nКличка: " + item_content.toString() + "\nПол: "
+            + pet_sex.toString() + "\nПорода: " + breed.toString() + "\nДополнительная информация: " + information.toString())
         }
 
         listView = view.findViewById(R.id.list_view)
         val adapter = ArrayAdapter(requireContext(), android.R.layout.simple_list_item_1, list)
-        Log.d("Log", list.toString())
         listView?.adapter = adapter
 
         listView?.onItemClickListener =
             AdapterView.OnItemClickListener { parent, view, position, id ->
                 val selectedItemText = parent.getItemAtPosition(position).toString()
-                val pet_name = parent.getItemAtPosition(1).toString()
                 val intent = Intent(requireContext(), MainActivity2::class.java)
                 intent.putExtra("product", selectedItemText)
-                intent.putExtra("pet_name", pet_name)
                 startActivity(intent)
             }
     }
