@@ -8,6 +8,7 @@
     tools:context=".AboutMeFragment">
 
 
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="64dp"
@@ -42,7 +43,7 @@
         android:layout_marginStart="14dp"
         android:layout_marginTop="370dp"
         android:layout_marginEnd="64dp"
-        android:text="Имя: Даниил \nФамилия: Силин \n \nМестоположение: Российская Федерация, Самарская область, г. Сызрань \n
+        android:text="Имя пользователя: Ax1le\nИмя: Даниил \nФамилия: Силин \n \nМестоположение: Российская Федерация, Самарская область, г. Сызрань \n
 \nКонтакты для связи: \nТелефон: +7(927)0289139 \nE-mail: elico161001@gmail.com" />
 
     <ImageView
@@ -53,7 +54,7 @@
         android:layout_alignParentBottom="true"
         android:layout_marginStart="-2dp"
         android:layout_marginBottom="392dp"
-        android:src="@drawable/_9bi7nm_mqs" />
+        android:src="@drawable/ax1le" />
 
     <!--    <TextView-->
 <!--        android:layout_width="wrap_content"-->

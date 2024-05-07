@@ -31,8 +31,9 @@ class HomeFragment : Fragment() {
             val pet_sex: String = cursor.getString(cursor.getColumnIndex(DBHelper.TABLE_PET_SEX))
             val breed: String = cursor.getString(cursor.getColumnIndex(DBHelper.TABLE_PET_BREED))
             val information: String = cursor.getString(cursor.getColumnIndex(DBHelper.INFORMATION))
+            val address: String = cursor.getString(cursor.getColumnIndex(DBHelper.ADDRESS))
             list.add("ID объявления: " + item_id.toString() + "\nКличка: " + item_content.toString() + "\nПол: "
-            + pet_sex.toString() + "\nПорода: " + breed.toString() + "\nДополнительная информация: " + information.toString())
+            + pet_sex.toString() + "\nПорода: " + breed.toString() + "\nАдрес: " + address.toString() +"\nДополнительная информация: " + information.toString())
         }
 
         listView = view.findViewById(R.id.list_view)

@@ -18,23 +18,23 @@ class DBHelper(context: Context) : SQLiteOpenHelper(
             const val TABLE_PET_SEX = "sex"
             const val TABLE_PET_BREED = "breed"
             const val INFORMATION = "information"
+            const val ADDRESS = "address"
         }
 
     override fun onCreate(db: SQLiteDatabase?) {
         db?.execSQL("CREATE TABLE pets (" +
             "${BaseColumns._ID} INTEGER PRIMARY KEY, " +
             "pet_name VARCHAR(20)," +
-            "age INTEGER," +
             "breed VARCHAR(50), " +
             "sex VARCHAR(20), " +
-            "information VARCHAR(255))"
-//            "address VARCHAR(255)," +
-//            "email VARCHAR(100))"
+            "information VARCHAR(255)," +
+            "address VARCHAR(255))"
         )
 
-        db?.execSQL("INSERT INTO pets (pet_name, age, breed, sex, information) VALUES " +
-            "('Симка', '5', 'Уличный', 'Девочка', 'Приучена к лотку, отдам бесплатно')," +
-            " ('Масяня', 0.5, 'Домашняя', 'Девочка', 'Отдам в хорошие руки, любит беситься')"
+        db?.execSQL("INSERT INTO pets (pet_name, breed, sex, information, address) VALUES " +
+            "('Симка', 'Уличный', 'Девочка', 'Приучена к лотку, отдам бесплатно', 'г. Ульяновск, ул. Ульяновская д.77')," +
+            " ('Масяня', 'Домашняя', 'Девочка', 'Отдам в хорошие руки, любит беситься', 'г. Ульяновск, Пушкарёва д.22, кв.4')," +
+            " ('Барсик', 'Уличный', 'Мальчик', 'Взрослый кот, любит покушать', 'г. Сызрань, ул. Космонавтов 9, кв.22')"
         )
 
         db?.execSQL("CREATE TABLE favorites (" +

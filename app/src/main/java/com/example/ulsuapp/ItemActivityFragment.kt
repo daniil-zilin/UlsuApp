@@ -28,7 +28,7 @@ class ItemActivityFragment : Fragment() {
             val item_id: Int = cursor.getInt(cursor.getColumnIndex(BaseColumns._ID))
             val item_content: String = cursor.getString(cursor.getColumnIndex(DBHelper.TABLE_NAME_FIRST))
 
-            list.add(item_id.toString() + "\n" + item_content.toString())
+            list.add(item_content.toString())
         }
 
         listView = view.findViewById(R.id.list_view_2)
